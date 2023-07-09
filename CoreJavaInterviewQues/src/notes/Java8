@@ -1,0 +1,72 @@
+Ques 1:- what is default and static method in java 8 and what is the difference between them. Can we create more than
+one default and static methods in interface?
+Ans :-
+Default method :- Java 8 provides a facility to create default methods inside the interface. Methods which are defined
+inside the interface and tagged with default are known as default methods. These methods are non-abstract methods.
+
+Static method :- Like default methods interface allows adding static methods to it. We can define static methods inside
+the interface using the static keyword and are used to define utility methods.
+
+Difference :- 1.Default method can be overridden by its implementation classes if they required. Static method never be
+overridden by its implementaion classes.
+2.For accessing default method we need to create object of its implemented classes and for static method we can call by
+interface name bcoz it static belongs to class level.
+
+Can we create more than one default and static methods in interface : Yes
+
+
+Ques 2:- Abstract class vs Java 8 interface?
+Ans :- abstract class: Inside abstract class we can declare instance variables, which are required to the child class
+
+       Interface: Inside interface every variables is always public static and final we cannot declare instance variables
+
+       abstract class: Abstract class can talk about state of object
+
+       Interface: Interface can never talk about state of object
+
+       abstract class: Inside Abstract class we can declare constructors
+
+       Interface: Inside interface we cannot declare constructors as purpose of
+       constructors is to initialize instance variables. So what is the need of constructor there if we cannot have
+       instance variables in interfaces.
+
+       abstract class: Inside abstract class we can declare instance and static blocks
+
+       Interface: Interfaces cannot have instance and static blocks.
+
+       abstract class: Abstract class cannot refer lambda expression
+
+       Interfaces: Interfaces with single abstract method can refer lambda expression
+
+       abstract class: Inside abstract class we can override OBJECT CLASS methods
+
+       Interfaces: We cannot override OBJECT CLASS methods inside interfaces.
+
+       I will end on the note that:
+       Default method concepts/static method concepts in interface came just to save implementation classes but not to
+       provide meaningful useful implementation. Default methods/static methods are kind of dummy implementation,
+       "if you want you can use them or you can override them (in case of default methods) in implementation class"
+       Thus saving us from implementing new methods in implementation classes whenever new methods in interfaces are
+       added. Therefore interfaces can never be equal to abstract classes.
+
+
+
+Ques 3:- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

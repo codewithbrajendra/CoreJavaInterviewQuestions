@@ -1,0 +1,32 @@
+Ques 1:- what is default and static method in java 8 and what is the difference between them?
+Ans :-
+Default method :- Java 8 provides a facility to create default methods inside the interface. Methods which are defined
+inside the interface and tagged with default are known as default methods. These methods are non-abstract methods.
+
+Static method :- Like default methods interface allows adding static methods to it. We can define static methods inside
+the interface using the static keyword and are used to define utility methods.
+
+Difference :- 1.Default method can be overridden by its implementation classes if they required. Static method never be
+overridden by its implementaion classes.
+2.For accessing default method we need to create object of its implemented classes and for static method we can call by
+interface name bcoz it static belongs to class level.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
