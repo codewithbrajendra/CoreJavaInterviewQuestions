@@ -1,0 +1,2 @@
+module Okay_Java {
+}

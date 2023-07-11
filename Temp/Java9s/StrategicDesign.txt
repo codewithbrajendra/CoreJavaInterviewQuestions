@@ -1,0 +1,1 @@
+ Strategy Design pattern https://youtu.be/GNoqUfPH7LE

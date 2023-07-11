@@ -51,7 +51,26 @@ Ans :- abstract class: Inside abstract class we can declare instance variables, 
 
 
 
-Ques 3:-
+Ques 3:- What is functional interface in java 8?
+Ans :- An Interface that contains exactly one abstract method is known as functional interface. It can have any number of
+       default, static methods but can contain only one abstract method. It can also declare methods of object class.
+       Functional Interface is also known as Single Abstract Method Interfaces or SAM Interfaces. It is a new feature in
+       Java, which helps to achieve functional programming approach.
+       Program :- Practice/ParentFunctonalInterface, ChildFunctionalInterface
+
+Ques 4:- What is Function Interface in java 8?
+Ans :- The function interface is a funtional interface introduced in java 8. It takes as an argument(Object of type T) and
+      and returns an object(Object of type R). The argument and output can be a different type.
+
+      java.util.function.Function is a functional interface whose functional method (single abstract method) is
+      R apply(T t). The Function interface represents an operation that takes single argument T and returns a result R.
+
+      This is the internal implementation of the Function interface:
+
+      @FunctionalInterface
+      public interface Function<T, R> {
+            R apply(T t);
+      }
 
 
 
