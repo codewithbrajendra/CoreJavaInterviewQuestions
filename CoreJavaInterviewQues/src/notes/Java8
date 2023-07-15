@@ -71,11 +71,32 @@ Ans :- The function interface is a funtional interface introduced in java 8. It 
       public interface Function<T, R> {
             R apply(T t);
       }
+      Program :- java8/functionInterface/allprogram
 
+Ques 5:- What is stream in java 8?
+Ans :- Java provides new additional package in java 8 called java.util.stream. This package consist of classes,
+     interfaces and enum to allow functional operations on the elements.
 
+     1> Stream does not store elements. It simply conveys elements from source such as a data stucture, an array,
+     or an I/O channel through a pipeline of computational operations.
 
+     2> Stream is a functional in nature. Operation on stream doesn't modify it's source. For example filtering
+     a Stream obtained from a collection produces a new stream without filtered elements, rather than removing
+     elements from the source collection.
 
+     3> The elements of a stream only visited once during the life time of a stream. Like an iterator, a new
+     stream must be generated to revisit the same elements of the source.
 
+     4> We can use stream to filter, collect, print and convert from one data structure to other etc.
+     Program :- java8/stream/allprogram
+
+Ques 6:- What is predicate in java 8?
+Ans :- The predicate interface has an abstract method(test()) which represents a predicate(boolean-valued function) of
+     as a result of specified argument.
+     Program :- java8/predicate
+
+Ques 7:- What is method reference in java 8?
+Ans :-
 
 
 

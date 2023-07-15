@@ -691,5 +691,4 @@ class EmployeeDatabase {
 	}
 };
 
-
- */
+*/
