@@ -19,11 +19,11 @@ public class StreamEmployeeSorting {
         System.out.println("Before sorting of employee ::: "+employeeSortList);
 
         System.out.println("=================Sorting based on empId============================");
-        //Employee Id ascending order sorting
+        //Employee Id ascending order(object1 - object2) sorting
         List<EmployeeSort> employeeSortOnIdAsc = employeeSortList.stream()
                 .sorted((e1,e2) -> e1.getEmpId() - e2.getEmpId()).collect(Collectors.toList());
 
-        //Employee Id descending order sorting
+        //Employee Id descending order(object2 - object1) sorting
         List<EmployeeSort> employeeSortOnIdDsc = employeeSortList.stream()
                 .sorted((e1,e2) -> e2.getEmpId() - e1.getEmpId()).collect(Collectors.toList());
 

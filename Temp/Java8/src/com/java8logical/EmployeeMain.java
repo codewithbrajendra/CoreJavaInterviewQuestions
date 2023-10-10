@@ -20,16 +20,16 @@ public class EmployeeMain {
 
 	 List<Employee> emps = Arrays.asList(emp1,emp2,emp3,emp4,emp5,emp6,emp7,emp8,emp9,emp10);
 	 System.out.println(emps);
-	// List<Employee> filterEmps = emps.stream().filter(e -> e.getEmpSalary() > 50000).collect(Collectors.toList());
-	 
-	// System.out.println(filterEmps);
+//	 List<Employee> filterEmps = emps.stream().filter(e -> e.getEmpSalary() > 50000).collect(Collectors.toList());
+//	 
+//	 System.out.println(filterEmps);
 	 
 	 EmployeeMain employeeMain = new EmployeeMain();
-	// List<EmployeeDTO> employeesDTO = filterEmps.stream().map(employeeMain :: convertEmployeeToDTO).collect(Collectors.toList());
+//	 List<EmployeeDTO> employeesDTO = filterEmps.stream().map(employeeMain :: convertEmployeeToDTO).collect(Collectors.toList());
 //	System.out.println(employeesDTO);
 	 
-	 List<EmployeeDTO> employeesDTO = emps.stream().filter(e -> e.getEmpSalary() > 50000).map(employeeMain :: convertEmployeeToDTO).collect(Collectors.toList());
-		System.out.println(employeesDTO);
+//	 List<EmployeeDTO> employeesDTO = emps.stream().filter(e -> e.getEmpSalary() > 50000).map(employeeMain :: convertEmployeeToDTO).collect(Collectors.toList());
+//		System.out.println(employeesDTO);
 	}
 
 	public EmployeeDTO convertEmployeeToDTO(Employee emp) {
