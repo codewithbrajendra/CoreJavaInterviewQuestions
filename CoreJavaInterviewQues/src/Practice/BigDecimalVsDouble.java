@@ -1,10 +1,12 @@
+
 package Practice;
 
 import java.math.BigDecimal;
 
 public class BigDecimalVsDouble {
 
-    public static void main(String[] args) {
+
+public static void main(String[] args) {
         Double a = 0.02;
         Double b = 0.03;
         Double c = b - a;
@@ -18,4 +20,6 @@ public class BigDecimalVsDouble {
         System.out.println("Bigdecimal substraction : "+_c);
 
     }
+
 }
+
