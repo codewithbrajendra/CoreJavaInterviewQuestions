@@ -12,7 +12,7 @@ public class SecondMostOccurance {
     public static void main(String[] args) {
         String stJitendra = "aaababddd";
         Map<String, Long> collect = Arrays.stream(stJitendra.split("")).collect(Collectors.groupingBy(Function.identity() ,Collectors.counting()));
-
+        System.out.println("collect : "+collect);
         LinkedHashMap<String, Long> collect1 = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(2)
                 .skip(1)

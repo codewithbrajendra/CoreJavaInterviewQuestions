@@ -1,5 +1,4 @@
 package java8.functionInterface;
-
 import java.util.function.Function;
 
 public class FirstFuntionInterface {

@@ -1,5 +1,4 @@
 package java8.supplier;
-
 import java.util.Random;
 import java.util.function.Supplier;
 

@@ -1,5 +1,4 @@
 package java8.functionalInterface;
-
 @FunctionalInterface
 public interface ChildFunctionalInterface extends ParentFunctionalInterface {
 
@@ -20,5 +19,6 @@ public interface ChildFunctionalInterface extends ParentFunctionalInterface {
         public void print() {
             System.out.println("Print method of ParentFunctionalInterface.");
         }
+
     }
 }
