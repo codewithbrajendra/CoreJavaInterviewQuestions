@@ -1,0 +1,590 @@
+Ques 1 - To make amazon codewhisperer work on your local IDE you need to____
+1)Install code whisperer packages on local machine
+
+2)Install AWS toolkit as VSCode extension
+
+3)Allow AWS toolkit for Vscode access to AWS IAM identity Center
+
+a. 1
+b. 2
+c. 2,3
+d. 1,2,3
+
+Ans - b
+
+Ques 2 - On Vscode with Amazon CodeWhisperer, to reject a code sugestions given by the assistant you would press a "TAB" key
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 3 - State True or False
+
+While Amazon Codewhisperer can give code suggestions the abilty to help on how to use unfamiliar APIs is still under development(in planning stage) and at
+least an year away
+1) True 
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 4 - State True or False
+
+Amazon code whisperer may give more than one code suggestions and you are the free to accept any one of them or none
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 5 - Choose the correct statements about what action you would take for a situation where Amazon Codewhisperer doesn't give any suggestions.
+1) Unstall and reinstall AWS toolkit extension
+
+2) Reboot your machine
+
+3) Check if CodeWhisperer licence has expired
+
+4) Use debug feature. Enable dubugging under settings-extensions-aws tool kit-log level.
+
+5) Use any of the above methods
+
+a. 1
+b. 1,2
+c. 3
+d. 1,4
+
+Ans - d
+
+Ques 6 - Choose all correct statements
+While writing development code on windows VSCode IDE, real time code suggestions are made available 
+1) locally
+
+2) even on a machine without network connection
+
+3) Over the internet
+
+4) By a code whisperer services in aws cloud
+
+5) Can be locally if internet is not available otherwise over an internet
+
+a. 1,2
+b. 3,4
+c. 4
+d. 5
+
+Ans - c
+
+Ques 7 - State True or False
+GenAI capabilities, in general, depend heavily on your skills of providing precise context to the model engine.
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 8 - Which of the following LLMs is NOT a software coding focused model?
+Choose correct answers from the following list.
+1) Code Davinci 002 from OpenAI
+
+2) GPT-3 from OpenAI
+
+3) Microsoft copilot
+
+4) Code Gen for Salesforce on higgingface
+
+a. 1
+
+b. 2
+
+c. 3
+
+d. 4
+
+Ans - a
+
+Ques 9 - Choose all the correct statements for this scenario.
+Scanerio : A developer who is regular uses of amazon codewhisperer observes that the response he got for a specific comment/context today is different than 
+he got for exactly same input 2 months ago.
+
+1) It is not possible. Computers generate same response for the same input
+
+2) It is a possibility because the developer might have overlooked the differences betweeen inputs then and inputs now such as spelling mistakes
+
+3) It is quite possible as model engine is being continuously trained and improved over a period of time
+
+4) It is very much possible because model engines are not deterministic in nature
+
+a. 1
+b. 1,2
+c. 3
+d. 4
+e. 3,4
+
+Ans - a
+
+Ques 10 - These _______ are the differentiators between what amazon codewhisperer offers compared to other competing services.
+
+1) Reference tracking(Where the suggestion is coming from)
+
+2) security scanning
+
+3) low cost
+
+4) bias avoidance
+
+5) All of the above
+
+
+a. 1,2
+b. 3,4
+c. 1,2,4
+d. 5
+
+Ans - c
+
+Ques 11 - You, as an Enterprise customer, can control whether to allow or to prevent code suggestions across the board through settings. This is a useful 
+feature in cases that require code references.
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 12 - Amazon CodeWhisperer code suggestion functionlity provides support for YAML files.
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 13 - Stae True or False
+Amazon CodeWhisperer, being an Amazon product, is usefull for code suggestions and API usage ONLY for AWS services.
+1) True 
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 14 - State True or False
+Amazon Codewhisperer response would remain exactly the same even if you change the context of the inputs you give.
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 15 - True or False
+Code suggestions given by Amazon CodeWhisperer must always be accepted
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 16 - "Responsible AI" tag can be attached to Amazon CodeWhisperer beacuse of 
+1) Bias avoidance feature
+
+2) its ability to give code sugguestions by simply looking at your comments line
+
+3) Reference tracker feature
+
+a. 1
+b. 2
+c. 3
+
+Ans - c
+
+Ques 17 - Scenario: You are using telemetry feature of CodeWhisperer. What could be the likely objective?
+
+Select the correct one from the below list.
+1) You want to know the source CodeWhisperer has referred to while giving code suggestions.
+
+2) You want to toggle the setting that allows or prevents code suggestions.
+
+3) You want to find vulnerabilties in you code
+
+4) You want to find out CodeWhisperer usage.
+
+a. 1
+b. 2
+c. 3
+d. 4
+
+Ans - d
+
+Ques 18 - State True or False
+On VSCode with Amazon Codewhisperer, to reject a code suggestion given by the assistant you would press a "Delete" Key
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 19 - State True or False
+Amazon CodeWhisperer supports only two languages namely, Java and Python on variety of IDEs
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 20 - Amazon CodeWhisperer offers two licence type - individual and professional. Professionals from Enterprise can use AWS IAM identity center and single sign-on
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+
+=======================================================================================================================================================
+
+Ques 1 - State True or False
+You may just give the high-level idea about what you intend to acheive and Amazon Codewhisperer would write complete application for you
+1) True
+
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 2 - State True or False
+Amazon Code whisperer supports variety of languages but just on IDE called Visual Studio Code
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - 2
+
+Ques 3 - Amazon Code Whisperer secuirty scan feature(that runs on contents of the project) can save you investments on Enterprise grade software vulnerability management piece of software
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 4 - The reasons people use Amazon CodeWhisperer is______
+1) They can focus on innovation and business critical problems than on coding 
+
+2) It helps accelerate time to market
+
+3) It enhances the code security
+
+4) All of the above
+
+5) None of the above. Only for code completion tasks
+
+a. 1
+b. 2
+c. 3
+d. 4
+
+Ans - d
+
+Ques 5 - State which of the following can be identified as security issues by CodeWhisperer Security Scan feature
+1) Logical bug in a piece of code
+
+2) hard coded credentials in the code
+
+3) SQL injection
+
+4) written comments which are not in line with what the code is actually doing
+
+5) All of the above
+
+a. 5
+b. 2,3,4
+c. 2,3
+d. 1
+e. 2
+
+Ans - d
+
+Ques 6 - Amazon Codewhisperer is capable of giving multi line and full function recommendations.
+1) True
+
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 7 - State True or False
+While using VSCode IDE to write a program code. if you type a comment line indicating what you wish to do, a coding assistant like CodeWhisperer would generate and show you the function code that accomplishes the intended task however there is no way you control the format of results that come out of the function.
+1) True
+
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 8 - When you use Amazon CodeWhisperer you can run a security scan within an IDE on the contents of the project 
+1) True
+
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 9 - The feature that gets used for finding out CodeWhisperer usage is________
+1) debug
+
+2) security scan
+
+3) Reference Scan
+
+4) telemetry
+
+a. 4
+b. 3
+c. 2
+d. 1
+
+Ans - a
+
+Ques 10 - Choose correct answer for 
+Which of the following are use cases for GenAI
+1) Weather forecasting based on historical data
+
+2) Identifying objects from the input images
+
+3) Chatbots for customer support
+
+4) Code translation from one programing language to another
+
+5) All of the above
+
+a. 1,2
+b. 3,4
+c. 1,4
+d. 2,3
+e. 5
+
+Ans - b
+
+Ques 11 - State True or False
+Amazon CodeWhisperer supports many languages on many IDEs however Amazon is yet to launch support for their own Sagemaker and jupyter Lab
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 12 - Choose all the correct statement that apply
+Code Whisperer generates_____
+
+1) Only the code snippets but never a full function code
+
+2) Code based only on the comment statements that you write
+
+3) Code looking at only the code lines that you are typing while ignoring your comment line
+
+4) Code looking at your both comments as well as your code statements
+
+5) None are correct
+
+a. 1
+b. 2
+c. 3
+d. 4
+e. 5
+
+Ans - d
+
+===================================================================================================================================================
+
+Ques 1 - State all correct statement that apply to the given scenario
+Scenario - you as a developer are using Amazon Codewhisperer for a medium size python-based application.
+
+1) you can give high level objective and the data source to Codewhisperer and it generates code for the full application which you may just glance through to check coorectness.
+
+2) Codewhisperer works alongside you thereby giving coding help on small modules with limited objective.
+
+3) Codewhisperer is no smart that its response doesn't very simply because you altered the context(something that defines the intent)
+
+4) Codewhisperer is intented to be used as part of on-going development cycle where you are going back-and-fort it. It is not something that gives you end to-end solution straight away.
+
+5) All of the above are correct.
+
+a. 1
+b. 2
+c. 3
+d. 2,4
+e. 5
+
+
+Ques 2 - State True or False
+The code whisperer gives you response only when necessary although it keeps checking with the model engine if there is something that deserves an inference to be passed on at every word that you type-in
+1) True
+
+2) False
+
+a. 1
+b. 2
+
+Ans - b(NS)
+
+Ques 3 -  State True or False
+Amazon CodeWhisperer can give multi line response for five languages Python,Java,JS,Type Script, and C# however can give single line code suggestions for other languages.
+1) True
+
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 4 - State True or False
+You can get more and better code suggestions by rewording your comments in a manner that conveys precise and unambiguous message.
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - a
+
+Ques 5 - State True or False
+Real time GenAI powered coding companion has been in existence and in use over a decade now.
+1) True
+2) False
+
+a. 1
+b. 2
+
+Ans - b
+
+Ques 6 - Which one from the below list is not an LLM?
+1) Davinci
+
+2) Curie
+
+3) Babbage
+
+4) Fensui-V
+
+5) None from this list. All are LLMs.
+
+a. 1
+b. 2
+c. 3
+d. 4
+e. 5
+
+Ans - d
+
+Ques 7 - Choose a correct statement for 
+Amazon Codewhisperer is capable of_________
+1) New code generation
+
+2) Test case generation for the function that it has been created by the code generation it did
+
+3) Data generation when you provide one sample record
+
+4) All of the above
+
+a. 1
+b. 2
+c. 3
+d. 4
+
+Ans - d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

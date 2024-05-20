@@ -1,0 +1,175 @@
+import React, { useState, useEffect } from "react";
+
+const Home = () => {
+  const [board, setBoard] = useState(Array(9).fill("/"));
+  const [player, setPlayer] = useState("X");
+  const [winner, setWinner] = useState("");
+  const [buttonText, setButtonText] = useState("Button");
+
+  const handleButtonClick = (index) => {
+    setButtonText("Button Clicked");
+    if (board[index] === "/") {
+      const newBoard = [...board];
+      newBoard[index] = player;
+      setBoard(newBoard);
+      setPlayer(player === "X" ? "O" : "X");
+      checkWinner(newBoard);
+    }
+  };
+
+  const checkWinner = (board) => {
+    const winningConditions = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+    for (let condition of winningConditions) {
+      const [a, b, c] = condition;
+      if (board[a] !== "/" && board[a] === board[b] && board[b] === board[c]) {
+        setWinner(
+          board[a] &&
+            (board[a] === "X" ? "Cross Is Winner" : "Circle Is Winner")
+        );
+        return;
+      }
+    }
+    if (!board.includes("/")) {
+      setWinner("Draw");
+    }
+  };
+
+  const resetGame = () => {
+    setBoard(Array(9).fill("/"));
+    setPlayer("X");
+    setWinner("");
+  };
+
+  const jdGameClick = () => {
+    setButtonText("Jd Button Clicked");
+  };
+
+  return (
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <button
+                data-testid="button-1"
+                onClick={() => handleButtonClick(0)}
+                disabled={board[0] !== "/" || winner !== ""}
+              >
+                {board[0]}
+              </button>
+            </td>
+            <td>
+              <button
+                data-testid="button-2"
+                onClick={() => handleButtonClick(1)}
+                disabled={board[1] !== "/" || winner !== ""}
+              >
+                {board[1]}
+              </button>
+            </td>
+            <td>
+              <button
+                data-testid="button-3"
+                onClick={() => handleButtonClick(2)}
+                disabled={board[2] !== "/" || winner !== ""}
+              >
+                {board[2]}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button
+                data-testid="button-4"
+                onClick={() => handleButtonClick(3)}
+                disabled={board[3] !== "/" || winner !== ""}
+              >
+                {board[3]}
+              </button>
+            </td>
+            <td>
+              <button
+                data-testid="button-5"
+                onClick={() => handleButtonClick(4)}
+                disabled={board[4] !== "/" || winner !== ""}
+              >
+                {board[4]}
+              </button>
+            </td>
+            <td>
+              <button
+                data-testid="button-6"
+                onClick={() => handleButtonClick(5)}
+                disabled={board[5] !== "/" || winner !== ""}
+              >
+                {board[5]}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button
+                data-testid="button-7"
+                onClick={() => handleButtonClick(6)}
+                disabled={board[6] !== "/" || winner !== ""}
+              >
+                {board[6]}
+              </button>
+            </td>
+            <td>
+              <button
+                data-testid="button-8"
+                onClick={() => handleButtonClick(7)}
+                disabled={board[7] !== "/" || winner !== ""}
+              >
+                {board[7]}
+              </button>
+            </td>
+            <td>
+              <button
+                data-testid="button-9"
+                onClick={() => handleButtonClick(8)}
+                disabled={board[8] !== "/" || winner !== ""}
+              >
+                {board[8]}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div data-testid="winner">
+        {winner && (winner === "Draw" ? "Draw" : `${winner}`)}
+      </div>
+
+      <div data-testid="btt">{buttonText}</div>
+
+      {/* {winner && <p data-testid="winner">{winner} </p>} */}
+      {/* Cross Is Winner Cross Is Winner*/}
+      <button
+        onClick={resetGame}
+        data-testid="start"
+        style={{ display: winner ? "inline-block" : "none" }}
+      >
+        Start new Game
+      </button>
+
+      <button onClick={jdGameClick} data-testid="jdgame">
+        jdGameClick
+      </button>
+    </div>
+  );
+};
+export default Home;
+
+// All Buttons will have data-testid=“button-(no.ofbutton)”. ForExample:-“button-1”.
+// The Message that is shown for winning or draw should have data-testid=“winner”.
+// The Start a new game Button should have data-testid=“start”

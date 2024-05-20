@@ -1,0 +1,14 @@
+1.clipboard -
+if This.State < 1 then return "#ebebeb" 
+else return "#b2ebc1"
+end
+
+2.personal-information -
+if This.State = 1 then return "#ebebeb" 
+else 
+    if This.State > 1 then return "#b2ebc1"
+    end
+end
+
+3.crop -
+if This.State = 2 then return "#ebebeb" end
