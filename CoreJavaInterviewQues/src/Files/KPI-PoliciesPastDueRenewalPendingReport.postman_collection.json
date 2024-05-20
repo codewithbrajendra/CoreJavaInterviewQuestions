@@ -1,0 +1,198 @@
+{
+	"info": {
+		"name": "KPI-PoliciesPastDueRenewalPendingReport",
+		"_postman_id": "c45aa557-d422-4afd-9bd0-5c8ac03c2950",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FWCPoliciesPastDueReport",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{hostUrl}}/mic/api/oas/v1/reports/policiesPastDues",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"mic",
+						"api",
+						"oas",
+						"v1",
+						"reports",
+						"policiesPastDues"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "policiesPastDuesCounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{hostUrl}}/mic/api/oas/v1/reports/policiesPastDueCounts",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"mic",
+						"api",
+						"oas",
+						"v1",
+						"reports",
+						"policiesPastDueCounts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "renewalPendingPaymentsCounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{hostUrl}}/mic/api/oas/v1/reports/renewalPendingPaymentCounts",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"mic",
+						"api",
+						"oas",
+						"v1",
+						"reports",
+						"renewalPendingPaymentCounts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "renewalPendingPaymentData",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{hostUrl}}/mic/api/oas/v1/reports/renewalPendingPayment",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"mic",
+						"api",
+						"oas",
+						"v1",
+						"reports",
+						"renewalPendingPayment"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

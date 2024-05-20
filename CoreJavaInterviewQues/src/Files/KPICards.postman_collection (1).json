@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "98bebee2-fffd-427e-ac3d-98f1c959d1d1",
+		"name": "KPICards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14738139"
+	},
+	"item": [
+		{
+			"name": "KPI Product Count",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{userId}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"effectiveStartDateRange\": \"2023-11-01T10:01:00\",\r\n    \"effectiveEndDateRange\": \"2024-02-12T10:01:00\",\r\n    \"sortOrder\":\"ASC\",\r\n    \"sortColumn\":\"PolicyEffectiveDate\",\r\n    \"sourceSystemUserId\":\"1\",\r\n    \"sourceSystemCode\":\"MIC\",\r\n    \"sourceSystemRequestNo\":0,\r\n    \"additionalFilters\": [\r\n        {\r\n            \"filterColumn\": \"producerCode\",\r\n            \"filterValue\": \"{{producerCode}}\",\r\n            \"filterFormat\": \"STRING\"\r\n        },\r\n        {\r\n            \"filterColumn\": \"productCode\",\r\n            \"filterValue\": \"\",\r\n            \"filterFormat\": \"STRING\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/mic/api/oas/v1/reports/kpiProductCount",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"mic",
+						"api",
+						"oas",
+						"v1",
+						"reports",
+						"kpiProductCount"
+					]
+				},
+				"description": "- Extracts Quote or Policy transaction for given Entity Reference.\n- This service will return complete hierarchy of Policy object with all child objects in it.    \n"
+			},
+			"response": []
+		},
+		{
+			"name": "KPI Product Count By Status",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{userId}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  //  \"effectiveStartDateRange\": \"2023-11-01T10:01:00\",\r\n   // \"effectiveEndDateRange\": \"2024-02-12T10:01:00\",\r\n    \"sortOrder\":\"ASC\",\r\n    \"sortColumn\":\"PolicyEffectiveDate\",\r\n    \"sourceSystemUserId\":\"1\",\r\n    \"sourceSystemCode\":\"MIC\",\r\n    \"sourceSystemRequestNo\":0,\r\n    \"additionalFilters\": [\r\n        {\r\n            \"filterColumn\": \"producerCode\",\r\n            \"filterValue\": \"{{producerCode}}\",\r\n            \"filterFormat\": \"STRING\"\r\n        },\r\n        {\r\n            \"filterColumn\": \"productCode\",\r\n            \"filterValue\": \"\",\r\n            \"filterFormat\": \"STRING\"\r\n        },\r\n        {\r\n            \"filterColumn\": \"status\",\r\n            \"filterValue\": \"CANCELLED\", //PENDING CANCELLATION\r\n            \"filterFormat\": \"STRING\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/mic/api/oas/v1/reports/kpiProductCountByStatus",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"mic",
+						"api",
+						"oas",
+						"v1",
+						"reports",
+						"kpiProductCountByStatus"
+					]
+				},
+				"description": "- Extracts Quote or Policy transaction for given Entity Reference.\n- This service will return complete hierarchy of Policy object with all child objects in it.    \n"
+			},
+			"response": []
+		}
+	]
+}
