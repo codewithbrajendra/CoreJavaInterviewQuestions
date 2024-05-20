@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="TestDashboard.js"></script> -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+</head>
+<body>
+    <style>
+.main-table {
+  border-collapse: collapse;
+  cursor: pointer;
+  margin: 20px;
+  width: 320px;
+}
+
+table tr td {
+    /* border: 1px solid black; */
+    padding: 2px 1px 2px 1px;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    
+}
+.name{
+    left: 0;
+    padding: 2px 15px 2px 0px;
+}
+
+tr.ui-sortable-handle > td:first-child{
+    width: 100px;
+    /* background-color: lightgreen; */
+}
+
+.multipleRows tr > td {
+    border: none;
+    padding-left: 0px;
+}
+.main-table .radio {
+  height: 24px;
+  width: 24px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.main-table .switch {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 24px;
+  border: none;
+}
+
+.main-table .switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.main-table .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.main-table .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  }
+
+.main-table input:checked + .slider {
+  background-color: #1899d6;
+}
+
+
+.main-table input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+}
+
+/* Rounded sliders */
+.main-table .slider.round {
+  border-radius: 34px;
+}
+
+.main-table .slider.round:before {
+  border-radius: 50%;
+}
+
+.widgetborderbottom {
+    border-bottom: 3px dotted darkgrey !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    /*    width: 100% !important;*/
+}
+.widgetborderbottom1 {
+    border-bottom: 2px solid darkgrey !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    /*    width: 100% !important;*/
+}
+
+.fa-bars{
+    content: "\f0c9";
+}
+.fa-bars{
+    content: "";
+    color: #1899d6;
+}
+
+.fa-edit:before {
+    content: "\f044";
+}
+
+.fa-edit:before, .fa-pencil-square-o:before {
+    content: "";
+}
+
+.fa-trash:before {
+    content: "\f1f8";
+}
+
+.fa-trash:before {
+    content: "";
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+}
+
+.fas {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+.btn{
+    background-color: white;
+    border-color: white;
+}
+element.style {
+    background: transparent !important;
+}
+</style>
+
+    <div id="ManageDashboard>
+    <table id="DashboardTable" class="main-table">
+    </table>
+    <script>
+        window.onload = function(){
+            console.log("This is first function.");
+            renderData();
+  // your function code here
+};
+
+alert("Hi");
+ const id = "DashboardTable";
+
+function connect() {
+    this.paint();
+}
+
+function paint() {
+    // $("#idOfBody").sortable({
+    //     cursor: 'row-resize',
+    //     placeholder: 'ui-state-highlight',
+    //     opacity: '0.55',
+    //     items: '.ui-sortable-handle'
+    // }).disableSelection();
+    console.log("Paint Fucntion")
+    renderData();
+}
+
+function renderData() {
+    const DATA = [
+    {
+        "DasboardName": "Default Workspace",
+        "DashboardId": "D1",
+        "isActive": "Y"
+    },
+    {
+        "DasboardName": "Test Dashboard",
+        "DashboardId": "D2",
+        "isActive": "N"
+    },
+]
+    console.log("Render Data#####")
+    var tbody = document.createElement('tbody');
+    $(id).append(tbody);
+    // console.log("55 ",$("#"+id).append(tbody));
+    if (DATA.length != 0) {
+        console.log("inside array "+DATA.length)
+        DATA.forEach((item, index) => {
+            
+            const tr = document.createElement('tr');
+
+            const radio = document.createElement("INPUT");
+            radio.setAttribute("type","radio");
+            radio.classList.add("radio");
+
+            const toggleButton = document.createElement("button");
+            toggleButton.setAttribute("type","checkbox");
+            toggleButton.classList.add("toggle-button");
+
+            
+
+            const td1 = document.createElement('td');
+            const td2 = document.createElement('td');
+            const td3 = document.createElement('td');
+
+
+            const name = document.createTextNode(item.DasboardName);
+
+            td1.appendChild(radio);
+
+            td2.appendChild(name);
+
+            td3.appendChild(toggleButton);
+
+            toggleButton.addEventListener("click",function(){
+                toggleButton.classList.toggle("active");
+            })
+            
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            console.log("Before appendChild.");
+            tbody.appendChild(tr);
+        })
+    }
+}
+
+    </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Work of Data types</h1>
+    <script>
+      //Understanding data types
+      //There are 5 types of Data types in javascript
+      //object, number, string, boolean, undefined
+      console.log("welcome");
+
+      var a = 5;
+      let marks = 234523.2354;
+
+      console.log(typeof a);//number data type
+      console.log(typeof marks);//number data type
+
+      let name = "Peter";
+      let friendsName = "John";
+      console.log(typeof name);// string data type
+
+      let ch = "q";
+      console.log(typeof ch);// string data type
+
+      //true / false
+      let isActive = false;
+      console.log(typeof isActive);// boolean data type
+
+      var un;
+      console.log(typeof un);//undefined data type
+
+      var um = null;
+
+      console.log(typeof um);// object data type
+
+      //reference type
+      let names = ["first", "second", "third"];
+      console.log(typeof names);//object data type
+
+      let x = 23;
+      let y = 23;
+      console.log(x == y);// == return boolean value and compare value
+      let xa = [23];
+      let ya = [23];
+      console.log(xa == ya);
+
+      let student1 = {
+        name: "ram",
+        address: "XYZ",
+      };
+
+      console.log(student1);
+      console.log(typeof student1);
+      let d = new Date();
+      console.log(d);
+      console.log(typeof d);
+
+      //Data type comparison == is used to compare value and === is used to compare value as well as Data Type
+      let a1 = 5;
+      let b1 = "5";
+      console.log(a1==b1);//true bcoz value compared
+      console.log(a1===b1);//false bcoz value + data type is compared
+
+    </script>
+  </body>
+</html>
