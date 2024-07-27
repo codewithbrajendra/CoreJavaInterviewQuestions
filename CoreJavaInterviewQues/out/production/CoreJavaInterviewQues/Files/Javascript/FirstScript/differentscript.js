@@ -1,0 +1,1 @@
+alert("This is different script file...........................")

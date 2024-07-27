@@ -1,0 +1,373 @@
+1. Where should RBAC be customized?
+1> Environment level only
+2> Module level only
+3> Component level only
+4> Environment, module and component level
+5> Environment and module level
+
+2. If you have a text field in your first module that you would like to display in your fourth
+module in a Workflow, how would you achieve that?
+1> Text field with same property id
+2> Initializer setting a value
+3> Plugin to grab field
+4> Decision component setting a value
+5> Data work flow value
+
+3. Which modules should have RBAC enabled?
+1> Only modules with data being stored to the data base
+2> All modules, even ones that are executed server side
+3> Only modules that are executed server side
+4> Only modules where users are inputting data
+5> Only dashboard modules
+
+4. What would be the result of a user entering a number in a text field component?
+1> They will be able to enter the number and save it and it will be stored as a string. All data
+processing components will automatically read the value as a number
+2> They will be able to enter the number and save it but it will be stored as a string
+and possibly break any calculations that expect a number
+3> The user won't be able to enter a number because it's a text field
+4> The user will be able to enter a number but won't be able to save the submission
+because it's a text field
+5> They will be able to enter the number and save it and it will be stored in the data as a
+number
+
+5. Where do you setup authentication for an external API?
+1> In the plugin
+2> Data Administration
+3> Services Administration
+4> Environment Administration
+5> In a data table
+
+6. Where in the frontend can you see the request body of an API call?
+1> The console tab
+2> The network tab
+3> Revision History
+4> Sources
+5> Appications
+
+7. When adding components to the canvas, which is NOT a best practice?
+1> Add items in order of trigger sequence
+2> Organize components to be above or below other components that they int
+3> Use consistent and uniform naming conventions
+4> Group components by their type (i.e. all hidden components together)
+5> Label disabled components as "Disabled" so you tell they are not firing
+
+8. Use cases for Workflow most commonly are:
+1> Running scheduled/timed processes
+2> Linear submissions
+3> Applications that require handoffs
+4> A visual representation of the flow of your application
+5> All of the above
+
+9. If you want to return all submissions what end point should you use?
+1> Execute module
+2> List submissions
+3> Get module submissions
+4> Get Workflow Submissions
+5> Get Rows from Reference Data
+
+10. Why should you use Execute Module instead of making API calls (such as Get
+Submissions) directly in the browser?
+1> Protects proprietary functions and information
+2> Increases speed
+3> Increases security
+4> Increases modularity of applications
+5> All of the above
+
+11. Which of the following will happen if your dashboard is part of your workflow?
+1> The dashboard will have access to all the submission data without an API call
+2> The dashboard may have unexpected errors because it is not part of the process
+for a single submission
+3> The dashboard will never load
+4> The dashboard will not adhere to the RBAC rules you set up for it
+5> The dashboard can only be in the workflow if only one type of user needs to access it
+
+12. What best describes a table?
+1> A table is an array of objects, where each array represents a row and each index
+represents a column
+2> A table is a single object with many properties
+3> A table is an array of any set of data types
+4> A table is not a data structure in Unqork
+5> A table is an array of objects, where each object represents a row and each key
+represents a column
+
+13. What can you do to create workable buttons in a ViewGrid?
+1> Add the button to Action and Event in the viewgrid
+2> Check button in the display field in the viewgrid
+3> Add an action in a decision component to trigger on button click
+4> Add a plugin that you want triggered under Id where you have button checked
+5> All of these are ways to create workable buttons in a ViewGrid
+
+14. A hidden field can be used to store___ and when the default value is used it is stored__
+1> only tables, a table
+2> any data type or structure, whatever data type was put in
+3> strings and numbers only, a string
+4> any data type or structure, a string
+5> objects only, an object
+
+15. Where in the frontend can you see the request body of an API call?
+1> The console tab
+2> The network tab
+3> Revision History
+4> Sources
+5> Appications
+
+16. Where do you setup an external integration within Unqork?
+1> Application Administration
+2> Module Administration
+3> Services Administration
+4> Environment Administration
+5> Managed Assets Administration
+
+17. If a dashboard for workflow submissions has a button to take the user to a module that's
+part of the workflow, which of the following is true?
+1> You have to set the button up to send all of the data you want to display in the module
+2> All swimlane user types will be able to use the button to view the submission even
+if the module is not in their swimlane
+3> You will be able to see that submission no matter the role of the user
+4> You can't do this; you must use a modal instead
+5> If the submission you are trying to view is past that stage of the worfkflow you will get an
+error
+
+18. Which type of error would lead you to think you may have made a mistake in your API
+request body or url?
+1> 400 Error
+2> 200 Error
+3> 300 Error
+4> 100 Error
+5> Any of the above
+
+19. Where can you find the response data of an execute module API call?
+1> data.rawData
+2> [0].data.rawData
+3> data.resolved
+4> data.metadata
+5> data.currentUser
+
+20. Which of the following is NOT a best practice?
+1> Avoid using content components where possible
+2> Sensitive data should be stored in server side execute modules only
+3> Set event components to "watch" whenever possible
+4> Components should be organized in the order that they occur
+5> Place input components above the components that use them
+
+
+21. Which of the following would be best accomplished by using data workflow?
+1> Changing the structure of data
+2> Calculating an age
+3> Triggering a plugin
+4> Triggering a rule
+5> Writing data to a hidden field
+
+22. What does it mean when you receive a gateway error while going through a workflow?
+1> None of the conditions you set up for a gateway node are being matched so the
+workflow can't proceed.
+2> You don't have the right RBAC permissions to see that module.
+3> There is a problem connecting to the API..
+4> It could be A, B, or C.
+5> There is something wrong with the server.
+
+23. Which of these explains why event components should NOT be on "watch"?
+1> It can make troubleshooting difficult
+2> It could negatively impact the performance of the module
+3> It could lead to components firing asynchronously when they should be synchronous
+4> It could lead to components firing before they should
+5> All of the above
+
+24. What best describes a table?
+1> A table is an array of objects, where each array represents a row and each index
+represent a column
+2> A table is a single object with many properties
+3> A table is an array of any set of data types
+4> A table is not a data structure in Ungork
+5> A table is an array of objects, where each object represents a row and each key
+represent column
+
+
+25. If you want a user to see only their submissions on a dashboard, which RBAC settings
+should be used?
+1> This would be controlled by group settings
+2> Permissions setting of the ViewGrid
+3> Inherit
+4> No Access
+5> Obfuscate
+
+26. When would you use a data workflow to trigger an event instead of another component
+like a decision or initializer?
+1> When you want to manipulate the data first, then trigger an event
+2> You should always use initializers to trigger events
+3> When you only have one input
+4> When there is no input criteria for triggering the event
+5> When there are number and boolean inputs
+
+27. In a viewgrid you can add buttons in the following field areas EXCEPT:
+1> Action
+2> Display
+3> Event
+4> Outputs
+5> All of the above
+
+28. What operator converts an array of objects to an array of values?
+1> Table2Array
+2> Array2Col
+3> Col2Array
+4> Table2Object
+5> Col2 Table
+
+29. If you want a user to not be able to view a dashboard module, which RBAC settings
+should be used?
+1> No Access
+2> Read-Only
+3> Write
+4> Inherit
+5> Obfuscate
+
+30. What is the easiest way to create an object of data using data workflow?
+1> Group Input, Output
+2> Input, Table2Object, Output
+3> Create Table, Create Field, Get, Output
+4> Create Table, Input, Output
+5> Create Table, Create Field, Output
+
+31. When setting up RBAC in Administration, you should design your roles with
+1> Least priviledge access, then control and add access at the module and component
+level
+2> Most privilege access, then control and restrict at the module and component
+level
+3> Super User Access
+4> No child roles
+5> No parent roles
+
+32. When creating API modules within your applications, which of the following is best practice?
+A. Storing default values in all hidden fields
+B. Turning on “store data in database” for all fields
+C. Using the API specification snippet
+D. Using the payload analyzer
+E. Setting all components to trigger “on watch”
+
+33. For components that are not user facing, what is the best practice with naming the property Id
+and the canvas label text?
+A. They should be same level, both camel case without spacing
+B. PropertyId should be camel case and canvas label text should be title case
+C. They should be the same label, both title case with spaces if needed
+D. PropertyId should be title case and canvas label text should be camel case
+E. PropertyId should be camel case and canvas label text should be blank
+
+34. In a view grid you can add buttons in the following field areas EXCEPT:
+A. Action
+B. Display
+C. Event
+D. Outputs
+E. All of the above
+
+35. When setting up RBAC in Administration, you should design your roles with
+A. Least privilege access, then control and add access at the module and component level
+B. Most privilege access, then control and restrict at the module and component level
+C. Super user access
+D. No child roles
+E. No parent roles yeah again
+
+36. Where do you setup authentication for an external API?
+A. In the plugin
+B. Data administration
+C. Service administration
+D. Environment administration
+E. In a data table
+
+37. Which of these components is used to integrate with APIs?
+A. Initializer
+B. Calculator
+C. Decision
+D. Plugin
+E. Data workflow
+
+38. When using a workflow, two get submissions for the dashboard you should …
+A. Make a plugin call to get module submissions for the last module in the workflow
+B. Make the dashboard the last module in the workflow so that the submission is accessible in
+the data without a plug-in call.
+C. Make a plug-in call to the get workflow submissions endpoint
+D. Make an execute module call that executes a module that gets workflow submissions
+E. Make an executive module call that executes a module that gets module submissions for the
+last module in the workflow
+
+39. How to assign dynamic value and table object
+Ans: Binded table
+
+40. What data type you can use hidden field
+Ans: Hidden any data and structure
+
+41. Which have to operator as two inputs in data workflow
+A) Group Output
+B) Append
+C) Filter
+D) Set
+E) Group Set
+
+42. How to Create a page to Call a Same Component
+Ans: Same property ID
+
+43. Use Of data workflow
+Ans: Change the data type structure
+
+44. Best way to Get all submission data for Dashboard
+Ans: List Submission for dashboard
+
+45. How to use remote execute method for API
+Ans: Execute module in Unqork Internal
+
+46. Authorization and authentication
+Ans: authorization - what you can do
+authentication- who you are
+
+47. Data table in data workflow
+Ans: Index array of an object
+
+48. RBAC customization
+Ans: env,module,component
+
+49. Workable button in view grid
+Ans: All of the above like
+1.Event and action,
+2.Plugin and trigger button checked clicked.
+
+50. Execute module for dashboard
+Ans: module id
+
+51. What is return data of execute module
+Ans: data.resolved
+
+52. What are the 2 main functions of an Input operator?
+Ans: a) Input data of a component in to module
+b) Input dynamic data with datatable
+
+53. RBAC is administration which role given to that?
+Ans: Most privilege and the required changes in module and component
+
+54. What is the best practice to call the API
+Ans: plugin
+
+55. Which setting will be used to not show the submission data in view grid
+Ans: Group setting
+
+56. What will happen if dashboard is part of used with workflow
+Ans: Single submission
+
+57. What is not the best practice to group the component
+Ans: not by type
+
+58. if there is no condition
+Ans: Initializer
+
+59. Execute Module response
+Ans: data.rawData/
+data.resolved (correct
+
+60. Use cases for Workflow
+Ans: All of the above
+
+61. If you add a number in text field so which output as a number is right from below points?
+A. It will take string.
+B. It will convert as number.
+C. It will take as string and after using convert operator can be extract as number
+value from workflow.
+D. All of the above

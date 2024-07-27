@@ -1,0 +1,138 @@
+1.When adding components to the canvas, which is NOT a best practice?
+1> Add items in order of trigger sequence
+2> Organize components to be above or below other components that they int
+3> Use consistent and uniform naming conventions
+4> Group components by their type (i.e. all hidden components together) - Ans
+5> Label disabled components as "Disabled" so you tell they are not firing
+
+2.When using a workflow, to get submissions for the dashboard you should …
+
+A. Make a plugin call to get module submissions for the last module in the workflow
+B. Make the dashboard the last module in the workflow so that the submission is accessible in
+the data without a plug-in call.
+C. Make a plug-in call to the get workflow submissions endpoint
+D. Make an execute module call that executes a module that gets workflow submissions
+E. Make an executive module call that executes a module that gets module submissions for the
+last module in the workflow
+
+3. If you want a user to see only their submissions on a dashboard, which RBAC settings
+should be used?
+
+1>This would be controlled by group settings
+2>Permissions setting of the ViewGrid
+3>Inherit
+4>No Access
+5>Obfuscate
+
+4. If you want a user to see only their submissions on a dashboard, which RBAC settings
+should be used?
+
+1>This would be controlled by group settings
+2>Permissions setting of the ViewGrid
+3>Inherit
+4>No Access
+5>Obfuscate
+
+5. 9th question in MCQ
+
+6. What best describes a table?
+
+1. A table is an array of objects, where each array represents a row and each index
+represents a column
+2. A table is a single object with many properties
+3. A table is an array of any set of data types
+4. A table is not a data structure in Unqork
+5. A table is an array of objects, where each object represents a row and each key
+represents a column
+
+7. When setting up RBAC in Administration, you should design your roles with
+
+1>Least priviledge access, then control and add access at the module and component
+level
+2>Most privilege access, then control and restrict at the module and component
+level
+3>Super User Access
+4>No child roles
+5>No parent roles
+
+8. A hidden field can be used to store___ and when the default value is used it is stored__
+1> only tables, a table
+2> any data type or structure, whatever data type was put in
+3> strings and numbers only, a string
+4> any data type or structure, a string
+5> objects only, an object
+
+9. What does it mean when you receive a gateway error while going through a workflow?
+1> None of the conditions you set up for a gateway node are being matched so the
+workflow can't proceed.
+2> You don't have the right RBAC permissions to see that module.
+3> There is a problem connecting to the API..
+4> It could be A, B, or C.
+5> There is something wrong with the server
+
+10. Which of the following will happen if your dashboard is part of your workflow?
+
+1> The dashboard will have access to all the submission data without an API call
+2> The dashboard may have unexpected errors because it is not part of the process
+for a single submission
+3> The dashboard will never load
+4> The dashboard will not adhere to the RBAC rules you set up for it
+5> The dashboard can only be in the workflow if only one type of user needs to access it
+
+11. What is the easiest way to create an object of data using data workflow?
+
+1> Group Input, Output
+2> Input, Table2Object, Output
+3> Create Table, Create Field, Get, Output
+4> Create Table, Input, Output
+5> Create Table, Create Field, Output
+
+
+12.  Which of these explains why event components should NOT be on "watch"?
+1> It can make troubleshooting difficult
+2> It could negatively impact the performance of the module
+3> It could lead to components firing asynchronously when they should be synchronous
+4> It could lead to components firing before they should
+5> All of the above
+
+13.  Which modules should have RBAC enabled?
+1> Only modules with data being stored to the data base
+2> All modules, even ones that are executed server side
+3> Only modules that are executed server side
+4> Only modules where users are inputting data
+5> Only dashboard modules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
