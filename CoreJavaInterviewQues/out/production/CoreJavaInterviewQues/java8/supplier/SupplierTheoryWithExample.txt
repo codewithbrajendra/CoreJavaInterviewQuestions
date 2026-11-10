@@ -1,0 +1,167 @@
+In Java 8, Supplier<T> is a predefined functional interface that does not accept any input but returns a value.
+It is commonly used in real Java and Spring Boot projects for generating IDs, creating objects, providing default values, generating JWT-related timestamps, and delaying expensive operations until they are needed.
+
+Syntax :-
+    @FunctionalInterface
+    public interface Supplier<T> {
+        T get();
+    }
+Here:
+- T represents the return type.
+- get() is the single abstract method.
+- get() takes no arguments.
+- The implementation decides which value to return.
+
+Comparison with other functional interfaces
+Interface	       Input	Output	   Abstract method
+Function<T,R>	   One	    One	       apply()
+Predicate<T>	   One	    boolean	   test()
+Consumer<T>	       One	    Nothing	   accept()
+Supplier<T>	       None	    One	       get()
+
+-> Generate a unique order ID
+Using Java 8 Supplier, generate a unique ID whenever a new order is created.
+    import java.util.UUID;
+    import java.util.function.Supplier;
+
+    public class OrderService {
+        public static void main(String[] args) {
+            Supplier<String> orderIdSupplier =
+                    () -> UUID.randomUUID().toString();
+
+            System.out.println(orderIdSupplier.get());
+            System.out.println(orderIdSupplier.get());
+        }
+    }
+Output:
+6fd35d6a-0e72-45b2-916a-3145d3cf30cb
+b87a4f50-cb56-4815-a6a8-5e29f9dfc5e4
+
+Explaination:
+Here:
+-  () means no input.
+-  -> introduces the lambda implementation.
+-  UUID.randomUUID() generates a UUID.
+-  toString() converts the UUID into a String.
+
+orderIdSupplier.get();
+This executes the lambda and returns a newly generated ID. Each call generates another UUID.
+
+You can also use a method reference:
+    Supplier<UUID> supplier = UUID::randomUUID;
+    System.out.println(supplier.get());
+Here, Java connects the Supplier.get() method to the existing UUID.randomUUID() method.
+
+-> Create a default user when Optional is empty
+This is one of the most useful examples because it connects Supplier with the Optional class you learned earlier. If an employee name is unavailable, generate a default name using Supplier.
+    import java.util.Optional;
+    import java.util.function.Supplier;
+
+    public class OptionalSupplierExample {
+
+        public static void main(String[] args) {
+            Optional<String> employeeName = Optional.empty();
+
+            Supplier<String> defaultNameSupplier = () -> {
+                System.out.println("Generating default name...");
+                return "Guest Employee";
+            };
+
+            String name = employeeName.orElseGet(defaultNameSupplier);
+            System.out.println(name);
+        }
+    }
+Output:
+Generating default name...
+Guest Employee
+
+Why is Supplier useful here?
+The Optional.orElseGet() method accepts a Supplier.
+
+Its simplified signature is:
+public T orElseGet(Supplier<? extends T> supplier);
+
+It invokes supplier.get() only when the Optional is empty.
+
+Example:
+Optional<String> employeeName = Optional.of("Rahul");
+String name = employeeName.orElseGet(defaultNameSupplier);
+
+Output:
+Rahul
+
+The default supplier is not executed. This is called lazy evaluation.
+
+-> Create an Employee object using a constructor reference
+Use Supplier to create new Employee objects without directly calling the constructor in the calling code.
+
+For example:
+    import java.util.function.Supplier;
+
+    class Employee {
+        private String name;
+        private double salary;
+
+        public Employee() {
+            this.name = "New Employee";
+            this.salary = 5000;
+        }
+
+        @Override
+        public String toString() {
+            return name + " - " + salary;
+        }
+    }
+
+    public class EmployeeSupplierExample {
+
+        public static void main(String[] args) {
+            Supplier<Employee> employeeSupplier = Employee::new;
+
+            Employee emp1 = employeeSupplier.get();
+            Employee emp2 = employeeSupplier.get();
+
+            System.out.println(emp1);
+            System.out.println(emp2);
+
+            System.out.println(emp1 == emp2);
+        }
+    }
+
+Output:
+New Employee - 5000.0
+New Employee - 5000.0
+false
+
+Explaination:
+Supplier<Employee> employeeSupplier = Employee::new;
+
+Employee::new is a constructor reference.
+
+It is equivalent to:
+
+Supplier<Employee> employeeSupplier = () -> new Employee();
+
+Whenever you call:
+employeeSupplier.get();
+
+A new Employee object is created.
+This is useful for object factories, default objects, and reusable object-creation logic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -28,7 +28,7 @@ public class Java8CodingPractice {
 
         /*Employee employee = EmployeeDatabase.getEmployees().stream()
                 .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
-                .limit(2)
+                //.limit(2) //limit(2) is unnecessary here because findFirst() takes only one employee after the first is skipped.
                 .skip(1)
                 .findFirst()
                 .get();

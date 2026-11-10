@@ -20,6 +20,6 @@ public class SortEmpOnSalGroupByDept_20 {
                 .collect(Collectors.groupingBy(Employee::getDept, Collectors.toList())).entrySet().stream()
                 .sorted(Map.Entry.comparingByKey((c1, c2) -> c1.compareTo(c2)))
                 .collect(Collectors.toMap(a -> a.getKey(), b -> b.getValue()));
-       // System.out.println(collect8);
+        System.out.println(collect8);
     }
 }

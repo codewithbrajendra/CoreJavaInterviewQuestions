@@ -13,7 +13,8 @@ public class PrintKeyValueOfMap_7 {
         strMap.put("Ramaan", 3000);
         strMap.put("JD", 3000);
 
-        strMap.keySet().stream().iterator().forEachRemaining(System.out::println);
+        //strMap.keySet().stream().iterator().forEachRemaining(System.out::println);
+        strMap.keySet().stream().forEach(k -> System.out.println(k));
         System.out.println("===================================================");
         strMap.values().stream().forEach(System.out::println);
 

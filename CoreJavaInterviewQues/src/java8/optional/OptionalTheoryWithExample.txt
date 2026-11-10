@@ -1,0 +1,120 @@
+In Java 8, Optional<T> is a container class introduced to handle situations where a value may or may not be present.
+ Its main purpose is to reduce unexpected NullPointerException errors and make missing-value handling more explicit.
+
+ Optional<T> is a final class available in the java.util package.
+ Suppose you are searching for a user with ID 101.
+
+-> There are two possibilities:
+ - User 101 exists in the database.
+ - User 101 does not exist in the database.
+ Without Optional, a method might return null when the user is not found.
+
+ With Optional, the method explicitly returns an object that either contains the user or is empty.
+
+ -> Problem without Optional
+Consider this code:
+    public User getUserById(Long id) {
+        return userRepository.findUserById(id);
+    }
+Suppose the user doesn't exist and the repository method returns null.
+Then:
+User user = userService.getUserById(101L);
+System.out.println(user.getName());
+
+This throws: java.lang.NullPointerException
+Because user is null, calling getName() fails.
+
+One traditional solution is:
+    if (user != null) {
+        System.out.println(user.getName());
+    } else {
+        System.out.println("User not found");
+    }
+This is valid, but Optional provides a clearer API for representing a potentially missing result.
+
+-> Create UserRepository -
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+
+public interface UserRepository
+        extends JpaRepository<User, Long> {
+    Optional<User> findByEmail(String email);
+}
+Here, JpaRepository already provides: Why?
+Because the requested user might not exist in the database.
+
+Optional<User> user = userRepository.findById(101L);
+If the user exists, the Optional contains the entity. Otherwise, it is empty.
+
+-> Create a custom exception(ResourceNotFoundException.java)
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+public User getUserById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() ->
+                    new ResourceNotFoundException(
+                        "User not found with ID: " + id
+                    )
+                );
+    }
+}
+Case 1: User exists
+The repository returns an Optional containing the User object, and orElseThrow() returns that User.
+
+Case 2: User does not exist
+The repository returns Optional.empty(), and orElseThrow() throws ResourceNotFoundException.
+
+-> Important methods of Optional
+These are the methods most commonly asked about in Java interviews.
+   Method	                         Purpose
+   Optional.of(value)	             Creates an Optional containing a non-null value
+   Optional.ofNullable(value)	     Creates an Optional that may be empty
+   Optional.empty()	                 Creates an empty Optional
+   isPresent()	                     Checks whether a value exists
+   ifPresent()	                     Executes an action if a value exists
+   orElse()	                         Returns a default value when empty
+   orElseGet()	                     Lazily supplies a default value
+   orElseThrow()	                 Throws an exception when empty
+   map()	                         Transforms the contained value
+   filter()	                         Keeps the value if a condition matches
+   flatMap()	                     Transforms the value using a function returning another Optional
+
+-> map() - Suppose you want the user's email address:
+    String email = userRepository.findById(101L)
+            .map(User::getEmail)
+            .orElse("Email not available");
+If the user exists and has a non-null email, map() extracts it. Otherwise, the default string is returned.
+
+-> Important interview question: orElse() vs orElseGet() -
+Consider:
+    public static String getDefaultName() {
+        System.out.println("Fetching default name...");
+        return "Guest";
+    }
+Using orElse()
+    Optional<String> name = Optional.of("Rahul");
+    String result = name.orElse(getDefaultName());
+    System.out.println(result);
+Output:
+Fetching default name...
+Rahul
+
+Even though "Rahul" exists, getDefaultName() executes because Java evaluates method arguments before calling orElse().
+
+Using orElseGet() -
+    Optional<String> name = Optional.of("Rahul");
+    String result = name.orElseGet(() -> getDefaultName());
+    System.out.println(result);
+
+Output:
+Rahul
+
+Here, getDefaultName() is not called because the Optional already contains a value.
+
+Practical recommendation: Use orElseGet() when generating the fallback is expensive, such as querying another service, reading a file, or performing a complex calculation.
+
+
+
+

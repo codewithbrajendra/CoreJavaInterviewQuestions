@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class EmployeeDatabase {
+public class EmployeeDatabase {
 
     public static List<Employee> getEmployees() {
         return Stream.of(

@@ -1,6 +1,6 @@
 package Java8_Practices;
 
-class Employee {
+public class Employee {
     private Integer id;
     private String name;
     private String grade;

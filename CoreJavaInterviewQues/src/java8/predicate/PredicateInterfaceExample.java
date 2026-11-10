@@ -19,13 +19,13 @@ public class PredicateInterfaceExample {
         System.out.println("predicateEndsWith same with a value ::: "+predicateEndsWith.test("okayjava"));
         System.out.println("====================================================================================");
 
-        System.out.println("Predicate joining AND different value ::: "+predicateNullAndSizeCheck.and(predicateStartsWith).and(predicateEndsWith).test("abc"));
+        System.out.println("Predicate joining AND different value ::: "+predicateNullAndSizeCheck.and(predicateStartsWith).and(predicateEndsWith).test("abca"));
         System.out.println("Predicate joining AND same value ::: "+predicateNullAndSizeCheck.and(predicateStartsWith).and(predicateEndsWith).test("okayjava"));
 
         System.out.println("====================================================================================");
 
         System.out.println("Predicate joining OR different value ::: "+predicateStartsWith.or(predicateEndsWith).test("abc"));
-        System.out.println("Predicate joining OR same value ::: "+predicateStartsWith.or(predicateEndsWith).test("okayjava"));
+        System.out.println("Predicate joining OR same value ::: "+predicateStartsWith.or(predicateEndsWith).test("okay"));
 
         System.out.println("====================================================================================");
         //negate method return oposite result of test method.

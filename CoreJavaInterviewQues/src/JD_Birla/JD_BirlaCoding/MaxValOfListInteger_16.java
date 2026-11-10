@@ -20,7 +20,7 @@ public class MaxValOfListInteger_16 {
      //3rd Way
 Integer maxVal = myList3.stream().sorted(Comparator.comparing(Integer::intValue).reversed())
         .findFirst().get();
-        System.out.println(maxVal);
+       // System.out.println(maxVal);
 
     }
 }

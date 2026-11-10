@@ -117,7 +117,8 @@ public class PredicateEmployeeExample {
         }
         System.out.println("=========================================================================");
 
-        //BiPredicate is a different type of predicate which has two arguments. First arg is class and second arg is data type for dynamic value.
+        //BiPredicate is a different type of predicate which has two arguments. First arg is class and second arg is data type for dynamic
+        // value in this below example. Both arguments can be any type and based on this we calculate predicate conditions.
         BiPredicate<EmployeePredicate,Integer> biPredicate = (e,age) -> e.getAge() > age;
         for(EmployeePredicate employeePredicate : employees) {
 

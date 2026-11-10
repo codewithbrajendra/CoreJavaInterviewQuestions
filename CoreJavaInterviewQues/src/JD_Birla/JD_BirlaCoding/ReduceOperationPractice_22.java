@@ -7,7 +7,7 @@ import java.util.Optional;
 public class ReduceOperationPractice_22 {
 
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(3, 7, 8, 1, 5, 9);
+        List<Integer> numbers = Arrays.asList(3, 7, 8, 10, 5, 9);
 
         Optional<Integer> reduce = numbers.stream().reduce((a, b) -> a + b);
         if (reduce.isPresent())

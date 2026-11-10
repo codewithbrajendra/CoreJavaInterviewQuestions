@@ -15,7 +15,7 @@ public class GroupEmpOnDeptNSortEmpOnAvgSalOfDept_21 {
                         Employee::getDept,
                         Collectors.averagingDouble(Employee::getSalary)
                 ));
-       // collect.forEach((k,v) -> System.out.println(k + " : " +v));
+        //collect.forEach((k,v) -> System.out.println(k + " : " +v));
         Stream<Map.Entry<String, Double>> sorted = collect.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()));
          sorted.forEach(s -> System.out.println(s.getKey() + " " +s.getValue()));
 
